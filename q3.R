@@ -10,6 +10,7 @@ totalEmissions <- NEIBaltimore %>%
 
 g <-ggplot(totalEmissions, aes(year, Emissions, color=factor(type)))+geom_line()+geom_point()+theme(legend.title=element_blank())
 g <- g+ ggtitle("Emissions evolution by type in Baltimore city")
+# geom_smooth()  my be used for a smoother graph
 
 png("q3.png" , width = 480, height = 480,units="px");
 print(g)
